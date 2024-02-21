@@ -1,38 +1,37 @@
-import { base_url, bearer_token } from "./common";
+import { base_url, bearer_token } from './common';
 /**
- * 
- * @param {*} body 
- * @param {string} token 
+ *
+ * @param {*} body
+ * @param {string} token
  * @returns {RequestInit}
  */
-function opts(body = {}, token = "") {
-  /**@type {RequestInit["headers"]} */
-  const headers = {
-    "Content-Type": "application/json"
-  };
-  if (token.length > 0) {
-    headers["Authorization"] = `Bearer ${token}`;
-  }
-  return {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-  }
+function opts(body = {}, token = '') {
+	/**@type {RequestInit["headers"]} */
+	const headers = {
+		'Content-Type': 'application/json'
+	};
+	if (token.length > 0) {
+		headers['Authorization'] = `Bearer ${token}`;
+	}
+	return {
+		method: 'POST',
+		headers,
+		body: JSON.stringify(body)
+	};
 }
 /**
- * 
- * @param {string} url 
- * @param {RequestInit|undefined} options 
- * @returns 
+ *
+ * @param {string} url
+ * @param {RequestInit|undefined} options
+ * @returns
  */
 async function request(url, options = undefined) {
-  try {
-    const response = await fetch(url, options);
-    return await response.json();
-  } catch (err) {
-    return { err }
-  }
-
+	try {
+		const response = await fetch(url, options);
+		return await response.json();
+	} catch (err) {
+		return { err };
+	}
 }
 
 /**
@@ -40,14 +39,16 @@ async function request(url, options = undefined) {
  * @returns {Promise<RegisterResponse>}
  */
 export async function register(symbol = '', faction = '') {
-  return await request(`${base_url}/register`, opts({ symbol, faction }));
+	/**@type {RegisterResponse} */
+	const response = await request(`${base_url}/register`, opts({ symbol, faction }));
+	bearer_token.set(response.data.token);
+	return response;
 }
 
 /**
  * @typedef {import("./spacetraders-sdk/models/GetFactions200Response").GetFactions200Response} FactionResponse
  * @returns {Promise<FactionResponse>}
  */
-export async function factions() {
-  let res = await register("foo", "bar");
-  return await request(`${base_url}/factions`);
+export async function get_factions() {
+	return await request(`${base_url}/factions`);
 }
