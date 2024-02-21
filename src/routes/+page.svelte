@@ -1,6 +1,8 @@
 <script>
 	import { get_factions } from '$lib/spacetrader/index.js';
+	import { Button } from 'flowbite-svelte';
 	/** @typedef {import("$lib/spacetrader/spacetraders-sdk/models/GetFactions200Response").GetFactions200Response} FactionResponse */
+
 	/**@type {FactionResponse["data"]}*/
 	let factions = [];
 	async function fetch_factions() {
@@ -9,8 +11,7 @@
 	}
 </script>
 
-<h1>Spacetrader API Client</h1>
-<button on:click={fetch_factions}>get factions</button>
+<Button outline on:click={fetch_factions}>get factions</Button>
 {#if factions.length > 0}
 	<ul>
 		{#each factions as faction}
