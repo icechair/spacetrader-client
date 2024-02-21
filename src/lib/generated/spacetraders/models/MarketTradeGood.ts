@@ -82,16 +82,15 @@ export interface MarketTradeGood {
     sellPrice: number;
 }
 
-
 /**
- * @export
- */
-export const MarketTradeGoodTypeEnum = {
-    Export: 'EXPORT',
-    Import: 'IMPORT',
-    Exchange: 'EXCHANGE'
-} as const;
-export type MarketTradeGoodTypeEnum = typeof MarketTradeGoodTypeEnum[keyof typeof MarketTradeGoodTypeEnum];
+* @export
+* @enum {string}
+*/
+export enum MarketTradeGoodTypeEnum {
+    Export = 'EXPORT',
+    Import = 'IMPORT',
+    Exchange = 'EXCHANGE'
+}
 
 
 /**

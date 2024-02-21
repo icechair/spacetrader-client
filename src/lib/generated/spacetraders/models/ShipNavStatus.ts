@@ -12,17 +12,16 @@
  * Do not edit the class manually.
  */
 
-
 /**
  * The current status of the ship
  * @export
+ * @enum {string}
  */
-export const ShipNavStatus = {
-    InTransit: 'IN_TRANSIT',
-    InOrbit: 'IN_ORBIT',
-    Docked: 'DOCKED'
-} as const;
-export type ShipNavStatus = typeof ShipNavStatus[keyof typeof ShipNavStatus];
+export enum ShipNavStatus {
+    InTransit = 'IN_TRANSIT',
+    InOrbit = 'IN_ORBIT',
+    Docked = 'DOCKED'
+}
 
 
 export function ShipNavStatusFromJSON(json: any): ShipNavStatus {

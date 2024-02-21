@@ -12,19 +12,18 @@
  * Do not edit the class manually.
  */
 
-
 /**
  * The supply level of a trade good.
  * @export
+ * @enum {string}
  */
-export const SupplyLevel = {
-    Scarce: 'SCARCE',
-    Limited: 'LIMITED',
-    Moderate: 'MODERATE',
-    High: 'HIGH',
-    Abundant: 'ABUNDANT'
-} as const;
-export type SupplyLevel = typeof SupplyLevel[keyof typeof SupplyLevel];
+export enum SupplyLevel {
+    Scarce = 'SCARCE',
+    Limited = 'LIMITED',
+    Moderate = 'MODERATE',
+    High = 'HIGH',
+    Abundant = 'ABUNDANT'
+}
 
 
 export function SupplyLevelFromJSON(json: any): SupplyLevel {

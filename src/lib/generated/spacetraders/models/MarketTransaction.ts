@@ -69,15 +69,14 @@ export interface MarketTransaction {
     timestamp: Date;
 }
 
-
 /**
- * @export
- */
-export const MarketTransactionTypeEnum = {
-    Purchase: 'PURCHASE',
-    Sell: 'SELL'
-} as const;
-export type MarketTransactionTypeEnum = typeof MarketTransactionTypeEnum[keyof typeof MarketTransactionTypeEnum];
+* @export
+* @enum {string}
+*/
+export enum MarketTransactionTypeEnum {
+    Purchase = 'PURCHASE',
+    Sell = 'SELL'
+}
 
 
 /**

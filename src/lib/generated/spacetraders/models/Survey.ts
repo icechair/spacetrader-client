@@ -58,16 +58,15 @@ export interface Survey {
     size: SurveySizeEnum;
 }
 
-
 /**
- * @export
- */
-export const SurveySizeEnum = {
-    Small: 'SMALL',
-    Moderate: 'MODERATE',
-    Large: 'LARGE'
-} as const;
-export type SurveySizeEnum = typeof SurveySizeEnum[keyof typeof SurveySizeEnum];
+* @export
+* @enum {string}
+*/
+export enum SurveySizeEnum {
+    Small = 'SMALL',
+    Moderate = 'MODERATE',
+    Large = 'LARGE'
+}
 
 
 /**

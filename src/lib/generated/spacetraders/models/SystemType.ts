@@ -12,24 +12,23 @@
  * Do not edit the class manually.
  */
 
-
 /**
  * The type of system.
  * @export
+ * @enum {string}
  */
-export const SystemType = {
-    NeutronStar: 'NEUTRON_STAR',
-    RedStar: 'RED_STAR',
-    OrangeStar: 'ORANGE_STAR',
-    BlueStar: 'BLUE_STAR',
-    YoungStar: 'YOUNG_STAR',
-    WhiteDwarf: 'WHITE_DWARF',
-    BlackHole: 'BLACK_HOLE',
-    Hypergiant: 'HYPERGIANT',
-    Nebula: 'NEBULA',
-    Unstable: 'UNSTABLE'
-} as const;
-export type SystemType = typeof SystemType[keyof typeof SystemType];
+export enum SystemType {
+    NeutronStar = 'NEUTRON_STAR',
+    RedStar = 'RED_STAR',
+    OrangeStar = 'ORANGE_STAR',
+    BlueStar = 'BLUE_STAR',
+    YoungStar = 'YOUNG_STAR',
+    WhiteDwarf = 'WHITE_DWARF',
+    BlackHole = 'BLACK_HOLE',
+    Hypergiant = 'HYPERGIANT',
+    Nebula = 'NEBULA',
+    Unstable = 'UNSTABLE'
+}
 
 
 export function SystemTypeFromJSON(json: any): SystemType {

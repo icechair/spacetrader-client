@@ -64,33 +64,32 @@ export interface ShipModule {
     requirements: ShipRequirements;
 }
 
-
 /**
- * @export
- */
-export const ShipModuleSymbolEnum = {
-    MineralProcessorI: 'MODULE_MINERAL_PROCESSOR_I',
-    GasProcessorI: 'MODULE_GAS_PROCESSOR_I',
-    CargoHoldI: 'MODULE_CARGO_HOLD_I',
-    CargoHoldIi: 'MODULE_CARGO_HOLD_II',
-    CargoHoldIii: 'MODULE_CARGO_HOLD_III',
-    CrewQuartersI: 'MODULE_CREW_QUARTERS_I',
-    EnvoyQuartersI: 'MODULE_ENVOY_QUARTERS_I',
-    PassengerCabinI: 'MODULE_PASSENGER_CABIN_I',
-    MicroRefineryI: 'MODULE_MICRO_REFINERY_I',
-    OreRefineryI: 'MODULE_ORE_REFINERY_I',
-    FuelRefineryI: 'MODULE_FUEL_REFINERY_I',
-    ScienceLabI: 'MODULE_SCIENCE_LAB_I',
-    JumpDriveI: 'MODULE_JUMP_DRIVE_I',
-    JumpDriveIi: 'MODULE_JUMP_DRIVE_II',
-    JumpDriveIii: 'MODULE_JUMP_DRIVE_III',
-    WarpDriveI: 'MODULE_WARP_DRIVE_I',
-    WarpDriveIi: 'MODULE_WARP_DRIVE_II',
-    WarpDriveIii: 'MODULE_WARP_DRIVE_III',
-    ShieldGeneratorI: 'MODULE_SHIELD_GENERATOR_I',
-    ShieldGeneratorIi: 'MODULE_SHIELD_GENERATOR_II'
-} as const;
-export type ShipModuleSymbolEnum = typeof ShipModuleSymbolEnum[keyof typeof ShipModuleSymbolEnum];
+* @export
+* @enum {string}
+*/
+export enum ShipModuleSymbolEnum {
+    MineralProcessorI = 'MODULE_MINERAL_PROCESSOR_I',
+    GasProcessorI = 'MODULE_GAS_PROCESSOR_I',
+    CargoHoldI = 'MODULE_CARGO_HOLD_I',
+    CargoHoldIi = 'MODULE_CARGO_HOLD_II',
+    CargoHoldIii = 'MODULE_CARGO_HOLD_III',
+    CrewQuartersI = 'MODULE_CREW_QUARTERS_I',
+    EnvoyQuartersI = 'MODULE_ENVOY_QUARTERS_I',
+    PassengerCabinI = 'MODULE_PASSENGER_CABIN_I',
+    MicroRefineryI = 'MODULE_MICRO_REFINERY_I',
+    OreRefineryI = 'MODULE_ORE_REFINERY_I',
+    FuelRefineryI = 'MODULE_FUEL_REFINERY_I',
+    ScienceLabI = 'MODULE_SCIENCE_LAB_I',
+    JumpDriveI = 'MODULE_JUMP_DRIVE_I',
+    JumpDriveIi = 'MODULE_JUMP_DRIVE_II',
+    JumpDriveIii = 'MODULE_JUMP_DRIVE_III',
+    WarpDriveI = 'MODULE_WARP_DRIVE_I',
+    WarpDriveIi = 'MODULE_WARP_DRIVE_II',
+    WarpDriveIii = 'MODULE_WARP_DRIVE_III',
+    ShieldGeneratorI = 'MODULE_SHIELD_GENERATOR_I',
+    ShieldGeneratorIi = 'MODULE_SHIELD_GENERATOR_II'
+}
 
 
 /**

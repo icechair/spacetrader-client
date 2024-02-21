@@ -76,28 +76,27 @@ export interface ShipFrame {
     requirements: ShipRequirements;
 }
 
-
 /**
- * @export
- */
-export const ShipFrameSymbolEnum = {
-    Probe: 'FRAME_PROBE',
-    Drone: 'FRAME_DRONE',
-    Interceptor: 'FRAME_INTERCEPTOR',
-    Racer: 'FRAME_RACER',
-    Fighter: 'FRAME_FIGHTER',
-    Frigate: 'FRAME_FRIGATE',
-    Shuttle: 'FRAME_SHUTTLE',
-    Explorer: 'FRAME_EXPLORER',
-    Miner: 'FRAME_MINER',
-    LightFreighter: 'FRAME_LIGHT_FREIGHTER',
-    HeavyFreighter: 'FRAME_HEAVY_FREIGHTER',
-    Transport: 'FRAME_TRANSPORT',
-    Destroyer: 'FRAME_DESTROYER',
-    Cruiser: 'FRAME_CRUISER',
-    Carrier: 'FRAME_CARRIER'
-} as const;
-export type ShipFrameSymbolEnum = typeof ShipFrameSymbolEnum[keyof typeof ShipFrameSymbolEnum];
+* @export
+* @enum {string}
+*/
+export enum ShipFrameSymbolEnum {
+    Probe = 'FRAME_PROBE',
+    Drone = 'FRAME_DRONE',
+    Interceptor = 'FRAME_INTERCEPTOR',
+    Racer = 'FRAME_RACER',
+    Fighter = 'FRAME_FIGHTER',
+    Frigate = 'FRAME_FRIGATE',
+    Shuttle = 'FRAME_SHUTTLE',
+    Explorer = 'FRAME_EXPLORER',
+    Miner = 'FRAME_MINER',
+    LightFreighter = 'FRAME_LIGHT_FREIGHTER',
+    HeavyFreighter = 'FRAME_HEAVY_FREIGHTER',
+    Transport = 'FRAME_TRANSPORT',
+    Destroyer = 'FRAME_DESTROYER',
+    Cruiser = 'FRAME_CRUISER',
+    Carrier = 'FRAME_CARRIER'
+}
 
 
 /**

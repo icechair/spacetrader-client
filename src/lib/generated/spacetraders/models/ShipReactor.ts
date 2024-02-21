@@ -64,18 +64,17 @@ export interface ShipReactor {
     requirements: ShipRequirements;
 }
 
-
 /**
- * @export
- */
-export const ShipReactorSymbolEnum = {
-    SolarI: 'REACTOR_SOLAR_I',
-    FusionI: 'REACTOR_FUSION_I',
-    FissionI: 'REACTOR_FISSION_I',
-    ChemicalI: 'REACTOR_CHEMICAL_I',
-    AntimatterI: 'REACTOR_ANTIMATTER_I'
-} as const;
-export type ShipReactorSymbolEnum = typeof ShipReactorSymbolEnum[keyof typeof ShipReactorSymbolEnum];
+* @export
+* @enum {string}
+*/
+export enum ShipReactorSymbolEnum {
+    SolarI = 'REACTOR_SOLAR_I',
+    FusionI = 'REACTOR_FUSION_I',
+    FissionI = 'REACTOR_FISSION_I',
+    ChemicalI = 'REACTOR_CHEMICAL_I',
+    AntimatterI = 'REACTOR_ANTIMATTER_I'
+}
 
 
 /**

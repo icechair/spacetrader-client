@@ -12,26 +12,25 @@
  * Do not edit the class manually.
  */
 
-
 /**
  * Type of ship
  * @export
+ * @enum {string}
  */
-export const ShipType = {
-    Probe: 'SHIP_PROBE',
-    MiningDrone: 'SHIP_MINING_DRONE',
-    SiphonDrone: 'SHIP_SIPHON_DRONE',
-    Interceptor: 'SHIP_INTERCEPTOR',
-    LightHauler: 'SHIP_LIGHT_HAULER',
-    CommandFrigate: 'SHIP_COMMAND_FRIGATE',
-    Explorer: 'SHIP_EXPLORER',
-    HeavyFreighter: 'SHIP_HEAVY_FREIGHTER',
-    LightShuttle: 'SHIP_LIGHT_SHUTTLE',
-    OreHound: 'SHIP_ORE_HOUND',
-    RefiningFreighter: 'SHIP_REFINING_FREIGHTER',
-    Surveyor: 'SHIP_SURVEYOR'
-} as const;
-export type ShipType = typeof ShipType[keyof typeof ShipType];
+export enum ShipType {
+    Probe = 'SHIP_PROBE',
+    MiningDrone = 'SHIP_MINING_DRONE',
+    SiphonDrone = 'SHIP_SIPHON_DRONE',
+    Interceptor = 'SHIP_INTERCEPTOR',
+    LightHauler = 'SHIP_LIGHT_HAULER',
+    CommandFrigate = 'SHIP_COMMAND_FRIGATE',
+    Explorer = 'SHIP_EXPLORER',
+    HeavyFreighter = 'SHIP_HEAVY_FREIGHTER',
+    LightShuttle = 'SHIP_LIGHT_SHUTTLE',
+    OreHound = 'SHIP_ORE_HOUND',
+    RefiningFreighter = 'SHIP_REFINING_FREIGHTER',
+    Surveyor = 'SHIP_SURVEYOR'
+}
 
 
 export function ShipTypeFromJSON(json: any): ShipType {

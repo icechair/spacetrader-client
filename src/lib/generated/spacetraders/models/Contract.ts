@@ -77,16 +77,15 @@ export interface Contract {
     deadlineToAccept?: Date;
 }
 
-
 /**
- * @export
- */
-export const ContractTypeEnum = {
-    Procurement: 'PROCUREMENT',
-    Transport: 'TRANSPORT',
-    Shuttle: 'SHUTTLE'
-} as const;
-export type ContractTypeEnum = typeof ContractTypeEnum[keyof typeof ContractTypeEnum];
+* @export
+* @enum {string}
+*/
+export enum ContractTypeEnum {
+    Procurement = 'PROCUREMENT',
+    Transport = 'TRANSPORT',
+    Shuttle = 'SHUTTLE'
+}
 
 
 /**

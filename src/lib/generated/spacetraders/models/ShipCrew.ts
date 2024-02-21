@@ -57,15 +57,14 @@ export interface ShipCrew {
     wages: number;
 }
 
-
 /**
- * @export
- */
-export const ShipCrewRotationEnum = {
-    Strict: 'STRICT',
-    Relaxed: 'RELAXED'
-} as const;
-export type ShipCrewRotationEnum = typeof ShipCrewRotationEnum[keyof typeof ShipCrewRotationEnum];
+* @export
+* @enum {string}
+*/
+export enum ShipCrewRotationEnum {
+    Strict = 'STRICT',
+    Relaxed = 'RELAXED'
+}
 
 
 /**

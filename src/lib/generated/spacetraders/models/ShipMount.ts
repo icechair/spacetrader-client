@@ -64,49 +64,47 @@ export interface ShipMount {
     requirements: ShipRequirements;
 }
 
-
 /**
- * @export
- */
-export const ShipMountSymbolEnum = {
-    GasSiphonI: 'MOUNT_GAS_SIPHON_I',
-    GasSiphonIi: 'MOUNT_GAS_SIPHON_II',
-    GasSiphonIii: 'MOUNT_GAS_SIPHON_III',
-    SurveyorI: 'MOUNT_SURVEYOR_I',
-    SurveyorIi: 'MOUNT_SURVEYOR_II',
-    SurveyorIii: 'MOUNT_SURVEYOR_III',
-    SensorArrayI: 'MOUNT_SENSOR_ARRAY_I',
-    SensorArrayIi: 'MOUNT_SENSOR_ARRAY_II',
-    SensorArrayIii: 'MOUNT_SENSOR_ARRAY_III',
-    MiningLaserI: 'MOUNT_MINING_LASER_I',
-    MiningLaserIi: 'MOUNT_MINING_LASER_II',
-    MiningLaserIii: 'MOUNT_MINING_LASER_III',
-    LaserCannonI: 'MOUNT_LASER_CANNON_I',
-    MissileLauncherI: 'MOUNT_MISSILE_LAUNCHER_I',
-    TurretI: 'MOUNT_TURRET_I'
-} as const;
-export type ShipMountSymbolEnum = typeof ShipMountSymbolEnum[keyof typeof ShipMountSymbolEnum];
-
+* @export
+* @enum {string}
+*/
+export enum ShipMountSymbolEnum {
+    GasSiphonI = 'MOUNT_GAS_SIPHON_I',
+    GasSiphonIi = 'MOUNT_GAS_SIPHON_II',
+    GasSiphonIii = 'MOUNT_GAS_SIPHON_III',
+    SurveyorI = 'MOUNT_SURVEYOR_I',
+    SurveyorIi = 'MOUNT_SURVEYOR_II',
+    SurveyorIii = 'MOUNT_SURVEYOR_III',
+    SensorArrayI = 'MOUNT_SENSOR_ARRAY_I',
+    SensorArrayIi = 'MOUNT_SENSOR_ARRAY_II',
+    SensorArrayIii = 'MOUNT_SENSOR_ARRAY_III',
+    MiningLaserI = 'MOUNT_MINING_LASER_I',
+    MiningLaserIi = 'MOUNT_MINING_LASER_II',
+    MiningLaserIii = 'MOUNT_MINING_LASER_III',
+    LaserCannonI = 'MOUNT_LASER_CANNON_I',
+    MissileLauncherI = 'MOUNT_MISSILE_LAUNCHER_I',
+    TurretI = 'MOUNT_TURRET_I'
+}
 /**
- * @export
- */
-export const ShipMountDepositsEnum = {
-    QuartzSand: 'QUARTZ_SAND',
-    SiliconCrystals: 'SILICON_CRYSTALS',
-    PreciousStones: 'PRECIOUS_STONES',
-    IceWater: 'ICE_WATER',
-    AmmoniaIce: 'AMMONIA_ICE',
-    IronOre: 'IRON_ORE',
-    CopperOre: 'COPPER_ORE',
-    SilverOre: 'SILVER_ORE',
-    AluminumOre: 'ALUMINUM_ORE',
-    GoldOre: 'GOLD_ORE',
-    PlatinumOre: 'PLATINUM_ORE',
-    Diamonds: 'DIAMONDS',
-    UraniteOre: 'URANITE_ORE',
-    MeritiumOre: 'MERITIUM_ORE'
-} as const;
-export type ShipMountDepositsEnum = typeof ShipMountDepositsEnum[keyof typeof ShipMountDepositsEnum];
+* @export
+* @enum {string}
+*/
+export enum ShipMountDepositsEnum {
+    QuartzSand = 'QUARTZ_SAND',
+    SiliconCrystals = 'SILICON_CRYSTALS',
+    PreciousStones = 'PRECIOUS_STONES',
+    IceWater = 'ICE_WATER',
+    AmmoniaIce = 'AMMONIA_ICE',
+    IronOre = 'IRON_ORE',
+    CopperOre = 'COPPER_ORE',
+    SilverOre = 'SILVER_ORE',
+    AluminumOre = 'ALUMINUM_ORE',
+    GoldOre = 'GOLD_ORE',
+    PlatinumOre = 'PLATINUM_ORE',
+    Diamonds = 'DIAMONDS',
+    UraniteOre = 'URANITE_ORE',
+    MeritiumOre = 'MERITIUM_ORE'
+}
 
 
 /**

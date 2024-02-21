@@ -12,16 +12,8 @@
  * Do not edit the class manually.
  */
 
-import type { Array<WaypointTraitSymbol> } from './Array&lt;WaypointTraitSymbol&gt;';
-import {
-    instanceOfArray<WaypointTraitSymbol>,
-    Array<WaypointTraitSymbol>FromJSON,
-    Array<WaypointTraitSymbol>FromJSONTyped,
-    Array<WaypointTraitSymbol>ToJSON,
-} from './Array&lt;WaypointTraitSymbol&gt;';
 import type { WaypointTraitSymbol } from './WaypointTraitSymbol';
 import {
-    instanceOfWaypointTraitSymbol,
     WaypointTraitSymbolFromJSON,
     WaypointTraitSymbolFromJSONTyped,
     WaypointTraitSymbolToJSON,
@@ -42,7 +34,7 @@ export function GetSystemWaypointsTraitsParameterFromJSONTyped(json: any, ignore
     if ((json === undefined) || (json === null)) {
         return json;
     }
-    return { ...Array<WaypointTraitSymbol>FromJSONTyped(json, true), ...WaypointTraitSymbolFromJSONTyped(json, true) };
+    return json;
 }
 
 export function GetSystemWaypointsTraitsParameterToJSON(value?: GetSystemWaypointsTraitsParameter | null): any {
@@ -52,14 +44,6 @@ export function GetSystemWaypointsTraitsParameterToJSON(value?: GetSystemWaypoin
     if (value === null) {
         return null;
     }
-
-    if (instanceOfArray<WaypointTraitSymbol>(value)) {
-        return Array<WaypointTraitSymbol>ToJSON(value as Array<WaypointTraitSymbol>);
-    }
-    if (instanceOfWaypointTraitSymbol(value)) {
-        return WaypointTraitSymbolToJSON(value as WaypointTraitSymbol);
-    }
-
-    return {};
+    return value;
 }
 

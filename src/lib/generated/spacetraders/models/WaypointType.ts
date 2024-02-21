@@ -12,28 +12,27 @@
  * Do not edit the class manually.
  */
 
-
 /**
  * The type of waypoint.
  * @export
+ * @enum {string}
  */
-export const WaypointType = {
-    Planet: 'PLANET',
-    GasGiant: 'GAS_GIANT',
-    Moon: 'MOON',
-    OrbitalStation: 'ORBITAL_STATION',
-    JumpGate: 'JUMP_GATE',
-    AsteroidField: 'ASTEROID_FIELD',
-    Asteroid: 'ASTEROID',
-    EngineeredAsteroid: 'ENGINEERED_ASTEROID',
-    AsteroidBase: 'ASTEROID_BASE',
-    Nebula: 'NEBULA',
-    DebrisField: 'DEBRIS_FIELD',
-    GravityWell: 'GRAVITY_WELL',
-    ArtificialGravityWell: 'ARTIFICIAL_GRAVITY_WELL',
-    FuelStation: 'FUEL_STATION'
-} as const;
-export type WaypointType = typeof WaypointType[keyof typeof WaypointType];
+export enum WaypointType {
+    Planet = 'PLANET',
+    GasGiant = 'GAS_GIANT',
+    Moon = 'MOON',
+    OrbitalStation = 'ORBITAL_STATION',
+    JumpGate = 'JUMP_GATE',
+    AsteroidField = 'ASTEROID_FIELD',
+    Asteroid = 'ASTEROID',
+    EngineeredAsteroid = 'ENGINEERED_ASTEROID',
+    AsteroidBase = 'ASTEROID_BASE',
+    Nebula = 'NEBULA',
+    DebrisField = 'DEBRIS_FIELD',
+    GravityWell = 'GRAVITY_WELL',
+    ArtificialGravityWell = 'ARTIFICIAL_GRAVITY_WELL',
+    FuelStation = 'FUEL_STATION'
+}
 
 
 export function WaypointTypeFromJSON(json: any): WaypointType {

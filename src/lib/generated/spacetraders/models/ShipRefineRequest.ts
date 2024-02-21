@@ -27,22 +27,21 @@ export interface ShipRefineRequest {
     produce: ShipRefineRequestProduceEnum;
 }
 
-
 /**
- * @export
- */
-export const ShipRefineRequestProduceEnum = {
-    Iron: 'IRON',
-    Copper: 'COPPER',
-    Silver: 'SILVER',
-    Gold: 'GOLD',
-    Aluminum: 'ALUMINUM',
-    Platinum: 'PLATINUM',
-    Uranite: 'URANITE',
-    Meritium: 'MERITIUM',
-    Fuel: 'FUEL'
-} as const;
-export type ShipRefineRequestProduceEnum = typeof ShipRefineRequestProduceEnum[keyof typeof ShipRefineRequestProduceEnum];
+* @export
+* @enum {string}
+*/
+export enum ShipRefineRequestProduceEnum {
+    Iron = 'IRON',
+    Copper = 'COPPER',
+    Silver = 'SILVER',
+    Gold = 'GOLD',
+    Aluminum = 'ALUMINUM',
+    Platinum = 'PLATINUM',
+    Uranite = 'URANITE',
+    Meritium = 'MERITIUM',
+    Fuel = 'FUEL'
+}
 
 
 /**

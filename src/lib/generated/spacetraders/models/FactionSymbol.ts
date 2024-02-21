@@ -12,33 +12,32 @@
  * Do not edit the class manually.
  */
 
-
 /**
  * The symbol of the faction.
  * @export
+ * @enum {string}
  */
-export const FactionSymbol = {
-    Cosmic: 'COSMIC',
-    Void: 'VOID',
-    Galactic: 'GALACTIC',
-    Quantum: 'QUANTUM',
-    Dominion: 'DOMINION',
-    Astro: 'ASTRO',
-    Corsairs: 'CORSAIRS',
-    Obsidian: 'OBSIDIAN',
-    Aegis: 'AEGIS',
-    United: 'UNITED',
-    Solitary: 'SOLITARY',
-    Cobalt: 'COBALT',
-    Omega: 'OMEGA',
-    Echo: 'ECHO',
-    Lords: 'LORDS',
-    Cult: 'CULT',
-    Ancients: 'ANCIENTS',
-    Shadow: 'SHADOW',
-    Ethereal: 'ETHEREAL'
-} as const;
-export type FactionSymbol = typeof FactionSymbol[keyof typeof FactionSymbol];
+export enum FactionSymbol {
+    Cosmic = 'COSMIC',
+    Void = 'VOID',
+    Galactic = 'GALACTIC',
+    Quantum = 'QUANTUM',
+    Dominion = 'DOMINION',
+    Astro = 'ASTRO',
+    Corsairs = 'CORSAIRS',
+    Obsidian = 'OBSIDIAN',
+    Aegis = 'AEGIS',
+    United = 'UNITED',
+    Solitary = 'SOLITARY',
+    Cobalt = 'COBALT',
+    Omega = 'OMEGA',
+    Echo = 'ECHO',
+    Lords = 'LORDS',
+    Cult = 'CULT',
+    Ancients = 'ANCIENTS',
+    Shadow = 'SHADOW',
+    Ethereal = 'ETHEREAL'
+}
 
 
 export function FactionSymbolFromJSON(json: any): FactionSymbol {

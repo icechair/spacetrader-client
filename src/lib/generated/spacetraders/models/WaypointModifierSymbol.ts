@@ -12,19 +12,18 @@
  * Do not edit the class manually.
  */
 
-
 /**
  * The unique identifier of the modifier.
  * @export
+ * @enum {string}
  */
-export const WaypointModifierSymbol = {
-    Stripped: 'STRIPPED',
-    Unstable: 'UNSTABLE',
-    RadiationLeak: 'RADIATION_LEAK',
-    CriticalLimit: 'CRITICAL_LIMIT',
-    CivilUnrest: 'CIVIL_UNREST'
-} as const;
-export type WaypointModifierSymbol = typeof WaypointModifierSymbol[keyof typeof WaypointModifierSymbol];
+export enum WaypointModifierSymbol {
+    Stripped = 'STRIPPED',
+    Unstable = 'UNSTABLE',
+    RadiationLeak = 'RADIATION_LEAK',
+    CriticalLimit = 'CRITICAL_LIMIT',
+    CivilUnrest = 'CIVIL_UNREST'
+}
 
 
 export function WaypointModifierSymbolFromJSON(json: any): WaypointModifierSymbol {

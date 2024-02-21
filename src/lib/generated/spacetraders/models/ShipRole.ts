@@ -12,28 +12,27 @@
  * Do not edit the class manually.
  */
 
-
 /**
  * The registered role of the ship
  * @export
+ * @enum {string}
  */
-export const ShipRole = {
-    Fabricator: 'FABRICATOR',
-    Harvester: 'HARVESTER',
-    Hauler: 'HAULER',
-    Interceptor: 'INTERCEPTOR',
-    Excavator: 'EXCAVATOR',
-    Transport: 'TRANSPORT',
-    Repair: 'REPAIR',
-    Surveyor: 'SURVEYOR',
-    Command: 'COMMAND',
-    Carrier: 'CARRIER',
-    Patrol: 'PATROL',
-    Satellite: 'SATELLITE',
-    Explorer: 'EXPLORER',
-    Refinery: 'REFINERY'
-} as const;
-export type ShipRole = typeof ShipRole[keyof typeof ShipRole];
+export enum ShipRole {
+    Fabricator = 'FABRICATOR',
+    Harvester = 'HARVESTER',
+    Hauler = 'HAULER',
+    Interceptor = 'INTERCEPTOR',
+    Excavator = 'EXCAVATOR',
+    Transport = 'TRANSPORT',
+    Repair = 'REPAIR',
+    Surveyor = 'SURVEYOR',
+    Command = 'COMMAND',
+    Carrier = 'CARRIER',
+    Patrol = 'PATROL',
+    Satellite = 'SATELLITE',
+    Explorer = 'EXPLORER',
+    Refinery = 'REFINERY'
+}
 
 
 export function ShipRoleFromJSON(json: any): ShipRole {

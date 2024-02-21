@@ -12,18 +12,17 @@
  * Do not edit the class manually.
  */
 
-
 /**
  * The ship's set speed when traveling between waypoints or systems.
  * @export
+ * @enum {string}
  */
-export const ShipNavFlightMode = {
-    Drift: 'DRIFT',
-    Stealth: 'STEALTH',
-    Cruise: 'CRUISE',
-    Burn: 'BURN'
-} as const;
-export type ShipNavFlightMode = typeof ShipNavFlightMode[keyof typeof ShipNavFlightMode];
+export enum ShipNavFlightMode {
+    Drift = 'DRIFT',
+    Stealth = 'STEALTH',
+    Cruise = 'CRUISE',
+    Burn = 'BURN'
+}
 
 
 export function ShipNavFlightModeFromJSON(json: any): ShipNavFlightMode {
