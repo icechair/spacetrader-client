@@ -1,5 +1,7 @@
 name: Deploy to GitHub Pages
 on:
+  pull_request:
+    types: [opened, reopened]
   push:
     branches: 'master'
 jobs:
@@ -26,6 +28,7 @@ jobs:
         with:
           path: 'build/'
   deploy:
+    if: github.ref_name == 'master'
     needs: build_site
     runs-on: ubuntu-latest
     permissions:
