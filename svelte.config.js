@@ -12,7 +12,10 @@ const config = {
 			precompress: false,
 			strict: true,
 		}),
-		paths: dev ? '' : process.env.BASE_PATH,
+		paths: {
+			relative: false,
+			base: dev ? '' : process.env.BASE_PATH,
+		}
 	}
 };
 
