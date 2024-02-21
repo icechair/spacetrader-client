@@ -7,7 +7,7 @@
 </script>
 
 <Navbar>
-	<NavBrand href="/">
+	<NavBrand href="{base}/">
 		<span class="me-3 h-6 sm:h-9 material-icons text-4xl">rocket_launch</span>
 		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
 			SpacetradersAPI Client
@@ -15,8 +15,7 @@
 	</NavBrand>
 	<NavHamburger />
 	<NavUl>
-		<NavLi href="/">Home</NavLi>
-		<NavLi href="/about">about</NavLi>
+		<NavLi href="{base}/">Home</NavLi>
 	</NavUl>
 </Navbar>
 
