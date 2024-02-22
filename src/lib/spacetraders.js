@@ -3,7 +3,10 @@ import {
 	AgentsApi,
 	DefaultApi,
 	FactionSymbol,
-	FactionsApi
+	FactionsApi,
+	ContractsApi,
+	FleetApi,
+	SystemsApi
 } from './generated/spacetraders';
 import { browser } from '$app/environment';
 
@@ -15,8 +18,12 @@ function accessToken() {
 
 const config = new Configuration({ accessToken });
 const api = new DefaultApi(config);
-const agents = new AgentsApi(config);
-const factions = new FactionsApi(config);
+
+export const agents = new AgentsApi(config);
+export const contacts = new ContractsApi(config);
+export const fleet = new FleetApi(config);
+export const systems = new SystemsApi(config);
+export const factions = new FactionsApi(config);
 
 /**
  * @param {FactionSymbol} faction
@@ -29,8 +36,4 @@ export async function register(faction, symbol = '') {
 	localStorage.setItem(bearer_token_key, result.data.token);
 	return result.data;
 }
-
-export async function get_factions() {
-	const result = await factions.getFactions({ limit: 20 });
-	return result.data;
-}
+export const getStatus = api.getStatus;
