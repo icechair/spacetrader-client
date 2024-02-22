@@ -4,6 +4,7 @@
 	import '../app.css';
 	import { base } from '$app/paths';
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	import * as api from '$lib/spacetraders.js';
 	import Icon from '$lib/components/basic/Icon.svelte';
 </script>
 
@@ -17,6 +18,7 @@
 	<NavHamburger />
 	<NavUl>
 		<NavLi href="{base}/">Home</NavLi>
+		{#if api.accessToken()}{/if}
 		<NavLi href="{base}/factions">Factions</NavLi>
 	</NavUl>
 </Navbar>
