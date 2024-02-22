@@ -11,7 +11,7 @@ import {
 import { browser } from '$app/environment';
 
 const bearer_token_key = 'spacetraders.bearer-token';
-function accessToken() {
+export function accessToken() {
 	if (!browser) return '';
 	return localStorage.getItem(bearer_token_key) || '';
 }
@@ -37,3 +37,5 @@ export async function register(faction, symbol = '') {
 	return result.data;
 }
 export const getStatus = api.getStatus;
+export const faction_symbols = FactionSymbol;
+export { FactionSymbol };
