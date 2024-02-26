@@ -14,7 +14,7 @@
 	async function handle_register() {
 		try {
 			const result = await register(selected_faction, agent_symbol);
-			return redirect(302, `${base}/`);
+			return redirect(302, `${base}/dashboard`);
 		} catch (e) {
 			error = `${e}`;
 		}
