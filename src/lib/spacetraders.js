@@ -17,7 +17,7 @@ export function accessToken() {
 }
 
 const config = new Configuration({ accessToken });
-const api = new DefaultApi(config);
+const api = new DefaultApi();
 
 export const agents = new AgentsApi(config);
 export const contacts = new ContractsApi(config);
@@ -36,6 +36,6 @@ export async function register(faction, symbol = '') {
 	localStorage.setItem(bearer_token_key, result.data.token);
 	return result.data;
 }
-export const getStatus = api.getStatus;
+export const getStatus = api.getStatus.bind(api);
 export const faction_symbols = FactionSymbol;
 export { FactionSymbol };
