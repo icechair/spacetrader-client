@@ -9,6 +9,5 @@
 {#if $navigating}
 	<Spinner />
 {:else}
-<p class="dark:text-white mb-1">{data.status}</p>
+	<p class="dark:text-white mb-1">{data.status}</p>
 {/if}
-

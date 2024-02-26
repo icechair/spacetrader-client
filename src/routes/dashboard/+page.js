@@ -5,14 +5,14 @@ export const ssr = false;
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
-    if (api.accessToken()) {
-        try {
-            const result = await api.agents.getMyAgent();
-            const agent = result.data;
-            return { agent }
-        } catch (e) {
-            console.log("api error: ", e);
-        }
-    }
-    redirect(302, `${base}/register`);
+	if (api.accessToken()) {
+		try {
+			const result = await api.agents.getMyAgent();
+			const agent = result.data;
+			return { agent };
+		} catch (e) {
+			console.log('api error: ', e);
+		}
+	}
+	redirect(302, `${base}/register`);
 }
