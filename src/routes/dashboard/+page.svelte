@@ -16,5 +16,4 @@
 	<p class="dark:text-white mb-3 text-lg">headquarters: {data.agent.headquarters}</p>
 	<p class="dark:text-white mb-3 text-lg">Ship Count: {data.agent.shipCount}</p>
 	<p class="dark:text-white mb-3 text-lg">Faction: {data.agent.startingFaction}</p>
-	<Button href="{base}/ships">ships</Button>
 {/if}

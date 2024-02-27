@@ -18,11 +18,6 @@
 	<NavHamburger />
 	<NavUl>
 		<NavLi href="{base}/">Home</NavLi>
-		<NavLi href="{base}/factions">Factions</NavLi>
-		{#if api.accessToken()}
-			<NavLi href="{base}/dashboard">Dashboard</NavLi>
-			<NavLi href="{base}/ships">Ships</NavLi>
-		{/if}
 	</NavUl>
 </Navbar>
 
