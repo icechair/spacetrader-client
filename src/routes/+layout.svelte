@@ -17,7 +17,7 @@
 	</NavBrand>
 	<NavHamburger />
 	<NavUl>
-		<NavLi href="{base}/">Home</NavLi>
+		<NavLi href="{base}/dashboard">dashboard</NavLi>
 	</NavUl>
 </Navbar>
 
