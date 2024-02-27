@@ -28,25 +28,25 @@
 	<p class="px-4 dark:text-white mb-1">frequency: {status.serverResets.frequency}</p>
 
 	<h3 class="dark:text-white text-xl mb-1">Announcements:</h3>
-    <Accordion>
-        {#each status.announcements as announcement }
-        <AccordionItem dense>
-            <span slot="header">{announcement.title}</span>
-                <p class="dark:text-gray-500">{announcement.body}</p>
-        </AccordionItem>
-        {/each}
-    </Accordion>
+	<Accordion>
+		{#each status.announcements as announcement}
+			<AccordionItem dense>
+				<span slot="header">{announcement.title}</span>
+				<p class="dark:text-gray-500">{announcement.body}</p>
+			</AccordionItem>
+		{/each}
+	</Accordion>
 	<h3 class="dark:text-white text-xl mb-1">leaderboards:</h3>
 	<div class="grid grid-cols-2 gap-1">
 		<div>
-        <h4 class="dark:text-white text-lg mb-1">mostCredits:</h4>
-			{#each status.leaderboards.mostCredits.entries() as [key, item] }
+			<h4 class="dark:text-white text-lg mb-1">mostCredits:</h4>
+			{#each status.leaderboards.mostCredits.entries() as [key, item]}
 				<p class="dark:text-gray-400">{key + 1}: {item.agentSymbol} - {item.credits}</p>
 			{/each}
 		</div>
 		<div>
-            <h4 class="dark:text-white text-lg mb-1">mostSubmittedCharts:</h4>
-			{#each status.leaderboards.mostSubmittedCharts.entries() as [key, item] }
+			<h4 class="dark:text-white text-lg mb-1">mostSubmittedCharts:</h4>
+			{#each status.leaderboards.mostSubmittedCharts.entries() as [key, item]}
 				<p class="dark:text-gray-400">{key + 1}: {item.agentSymbol} - {item.chartCount}</p>
 			{/each}
 		</div>
