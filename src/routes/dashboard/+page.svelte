@@ -1,19 +1,11 @@
 <script>
-	import { base } from '$app/paths';
-	import { navigating } from '$app/stores';
-	import { Button, Spinner } from 'flowbite-svelte';
+	import MyAgent from '$lib/components/MyAgent.svelte';
+	import Waypoint from '$lib/components/Waypoint.svelte';
+	import { getContext } from 'svelte';
 
-	/**@type{import('./$types').PageData}*/
-	export let data;
+	/** @type {import('svelte/store').Writable<import('$lib/generated/spacetraders').Agent>} */
+	const agent = getContext('agent');
 </script>
 
-{#if $navigating}
-	<Spinner />
-{:else}
-	<h2 class="dark:text-white mb-6 text-xl">Agent: {data.agent.symbol}</h2>
-	<p class="dark:text-white mb-3 text-lg">AccountID: {data.agent.accountId}</p>
-	<p class="dark:text-white mb-3 text-lg">credits: {data.agent.credits}$</p>
-	<p class="dark:text-white mb-3 text-lg">headquarters: {data.agent.headquarters}</p>
-	<p class="dark:text-white mb-3 text-lg">Ship Count: {data.agent.shipCount}</p>
-	<p class="dark:text-white mb-3 text-lg">Faction: {data.agent.startingFaction}</p>
-{/if}
+<MyAgent agent={$agent} />
+<Waypoint label="Headquarters" waypoint_symbol={$agent.headquarters} />
