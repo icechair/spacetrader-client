@@ -38,7 +38,6 @@ export async function register(faction, symbol = '') {
 }
 export const getStatus = api.getStatus.bind(api);
 export const faction_symbols = FactionSymbol;
-export { FactionSymbol };
 
 export function getWaypointSystem(wp_symbol = '') {
 	const parts = wp_symbol.split('-');
