@@ -3,7 +3,13 @@
 	import '@fontsource/material-icons';
 	import '../app.css';
 	import { base } from '$app/paths';
-	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	import {
+		Navbar,
+		NavBrand,
+		NavLi,
+		NavUl,
+		NavHamburger
+	} from 'flowbite-svelte';
 	import * as api from '$lib/spacetraders.js';
 	import Icon from '$lib/components/basic/Icon.svelte';
 	import { my_agent } from '$lib/store';
@@ -12,7 +18,9 @@
 <Navbar>
 	<NavBrand href="{base}/">
 		<Icon icon="rocket_launch" class="me-3 h-9 sm:h-9  text-4xl" />
-		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white mr-4">
+		<span
+			class="self-center whitespace-nowrap text-xl font-semibold dark:text-white mr-4"
+		>
 			SpacetradersAPI Client
 		</span>
 		{#if $my_agent}

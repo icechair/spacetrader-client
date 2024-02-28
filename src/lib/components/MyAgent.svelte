@@ -1,10 +1,10 @@
 <script>
-	import { Button, Popover } from "flowbite-svelte";
+	import { Button, Popover } from 'flowbite-svelte';
 
-/** @type {import("$lib/generated/spacetraders").Agent} */
-export let agent;
+	/** @type {import("$lib/generated/spacetraders").Agent} */
+	export let agent;
 
-    let placement;
+	let placement;
 </script>
 
 <Button class="my-agent">My Agent</Button>

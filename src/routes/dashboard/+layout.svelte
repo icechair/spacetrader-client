@@ -5,7 +5,7 @@
 
 	/**@type {import('./$types').PageData}*/
 	export let data;
-    $my_agent = data.agent;
+	$my_agent = data.agent;
 </script>
 
 <slot />

@@ -2,4 +2,6 @@
 	import { page } from '$app/stores';
 </script>
 
-<h1 class="dark:text-white text-4xl text-center pt-8">{$page.status}: {$page.error?.message}</h1>
+<h1 class="dark:text-white text-4xl text-center pt-8">
+	{$page.status}: {$page.error?.message}
+</h1>

@@ -24,7 +24,9 @@
 
 	<h3 class="dark:text-white text-xl mb-1">serverResets:</h3>
 	<p class="px-4 dark:text-white mb-1">next: {status.serverResets.next}</p>
-	<p class="px-4 dark:text-white mb-1">frequency: {status.serverResets.frequency}</p>
+	<p class="px-4 dark:text-white mb-1">
+		frequency: {status.serverResets.frequency}
+	</p>
 
 	<h3 class="dark:text-white text-xl mb-1">Announcements:</h3>
 	<Accordion>
@@ -40,13 +42,17 @@
 		<div>
 			<h4 class="dark:text-white text-lg mb-1">mostCredits:</h4>
 			{#each status.leaderboards.mostCredits.entries() as [key, item]}
-				<p class="dark:text-gray-400">{key + 1}: {item.agentSymbol} - {item.credits}</p>
+				<p class="dark:text-gray-400">
+					{key + 1}: {item.agentSymbol} - {item.credits}
+				</p>
 			{/each}
 		</div>
 		<div>
 			<h4 class="dark:text-white text-lg mb-1">mostSubmittedCharts:</h4>
 			{#each status.leaderboards.mostSubmittedCharts.entries() as [key, item]}
-				<p class="dark:text-gray-400">{key + 1}: {item.agentSymbol} - {item.chartCount}</p>
+				<p class="dark:text-gray-400">
+					{key + 1}: {item.agentSymbol} - {item.chartCount}
+				</p>
 			{/each}
 		</div>
 	</div>
