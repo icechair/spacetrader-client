@@ -13,7 +13,6 @@
 	<h2 class="dark:text-white text-2xl mb-1">Spacetraders API</h2>
 	<p class="dark:text-white mb-1">{status.version}</p>
 	<p class="dark:text-white mb-1">resetDate: {status.resetDate}</p>
-	<p class="dark:text-white mb-1">resetDate: {status.resetDate}</p>
 	<p class="dark:text-white mb-1">{status.description}</p>
 	<p class="dark:text-white mb-1">{status.status}</p>
 

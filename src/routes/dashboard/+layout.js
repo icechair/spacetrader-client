@@ -4,7 +4,7 @@ import { redirect } from '@sveltejs/kit';
 export const ssr = false;
 
 /** @type {import('./$types').PageLoad} */
-export async function load({ params }) {
+export async function load() {
 	if (api.accessToken()) {
 		try {
 			const result = await api.agents.getMyAgent();
