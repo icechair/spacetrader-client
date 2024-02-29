@@ -1,4 +1,8 @@
+import { getStatus } from '$lib/startraders';
+
 /** @type {import("./$types").PageLoad} */
 export async function load() {
-	return {};
+	const result = await getStatus();
+
+	return { ...result };
 }
