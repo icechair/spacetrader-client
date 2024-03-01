@@ -1,5 +1,5 @@
-/** @typedef {import("$lib/spacetraders").components["schemas"]} Schemas */
-/** @typedef {import("$lib/spacetraders").operations} Operations  */
+/** @typedef {import('./types').components["schemas"]} Schemas */
+/** @typedef {import("./types").operations} Operations  */
 
 import { browser } from '$app/environment';
 
@@ -23,7 +23,7 @@ export function set_access_token(token = '') {
  * @param {T?} body_params
  * @returns {RequestInit}
  */
-function req_params(body_params, method = 'GET') {
+export function req_params(body_params, method = 'GET') {
 	const headers = { 'Content-Type': 'application/json' };
 	const token = get_access_token();
 	if (token) {
@@ -48,7 +48,7 @@ function req_params(body_params, method = 'GET') {
  * @param {"POST" | "GET" | "PUT" | "DELETE"} method
  * @returns {Promise<ReqResult<U>>}
  */
-async function request(url_path, body = null, method = 'GET') {
+export async function request(url_path, body = null, method = 'GET') {
 	const result = await fetch(
 		`${base_url}${url_path}`,
 		req_params(body, method),
@@ -62,12 +62,4 @@ async function request(url_path, body = null, method = 'GET') {
 	const response_text = await result.text();
 	const payload = `${result.status}: ${result.statusText}\n${response_text}`;
 	return { error, payload };
-}
-
-/**
- * @typedef{Operations["get-status"]["responses"]["200"]["content"]["application/json"]} GetStatusResponse
- * @returns {Promise<ReturnType<typeof request<null,GetStatusResponse>>>}
- */
-export async function getStatus() {
-	return await request('/');
 }

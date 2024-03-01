@@ -1,4 +1,4 @@
-import { getStatus } from '$lib/startraders';
+import { getStatus } from '$lib/spacetraders';
 
 /** @type {import("./$types").PageLoad} */
 export async function load() {
