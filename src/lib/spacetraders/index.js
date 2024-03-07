@@ -1,9 +1,4 @@
-import { request } from './request';
+import { start } from './scheduler';
 
-/**
- * @typedef{import('./request').Operations["get-status"]["responses"]["200"]["content"]["application/json"]} GetStatusResponse
- * @returns {Promise<ReturnType<typeof request<null,GetStatusResponse>>>}
- */
-export async function getStatus() {
-	return await request('/');
-}
+export * as status from './status';
+start();

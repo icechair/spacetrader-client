@@ -1,7 +1,6 @@
+import { browser } from '$app/environment';
 /** @typedef {import('./types').components["schemas"]} Schemas */
 /** @typedef {import("./types").operations} Operations  */
-
-import { browser } from '$app/environment';
 
 const base_url = 'https://api.spacetraders.io/v2';
 
@@ -23,7 +22,7 @@ export function set_access_token(token = '') {
  * @param {T?} body_params
  * @returns {RequestInit}
  */
-export function req_params(body_params, method = 'GET') {
+function req_params(body_params, method = 'GET') {
 	const headers = { 'Content-Type': 'application/json' };
 	const token = get_access_token();
 	if (token) {
@@ -42,24 +41,12 @@ export function req_params(body_params, method = 'GET') {
  * @typedef {{error:false, payload: U} | {error:true, payload: string}} ReqResult
  */
 /**
- * @template T,U
+ * @template T
  * @param {string} url_path
  * @param {T?} body
  * @param {"POST" | "GET" | "PUT" | "DELETE"} method
- * @returns {Promise<ReqResult<U>>}
+ * @returns {import('./scheduler').RequestPrimitive}
  */
-export async function request(url_path, body = null, method = 'GET') {
-	const result = await fetch(
-		`${base_url}${url_path}`,
-		req_params(body, method),
-	);
-	let error = false;
-	if (result.ok) {
-		const payload = await result.json();
-		return { error, payload };
-	}
-	error = true;
-	const response_text = await result.text();
-	const payload = `${result.status}: ${result.statusText}\n${response_text}`;
-	return { error, payload };
+export function request(url_path, body = null, method = 'GET') {
+	return { url: `${base_url}${url_path}`, params: req_params(body, method) };
 }
