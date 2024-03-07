@@ -14,15 +14,43 @@
 <h1>Hello {text}!</h1>
 {#if $status_store}
 	<h2>{$status_store.status}</h2>
-	<p>
-		<span class="label">last reset:</span>
-		<span class="value">{date_format($status_store.resetDate)}</span><br />
-		<span class="label">next reset:</span>
-		<span class="value">{date_format($status_store.serverResets.next)}</span>
-	</p>
+    <h3>Reset Info</h3>
+	<table>
+		<tr>
+			<td class="label">last reset:</td>
+			<td class="value">{date_format($status_store.resetDate)}</td>
+		</tr>
+		<tr>
+			<td class="label">next reset:</td>
+			<td class="value">{date_format($status_store.serverResets.next)}</td>
+		</tr>
+	</table>
+    <h3>Stats:</h3>
+	<table>
+		<tr>
+			<td class="label">Agents:</td>
+			<td class="value">{$status_store.stats.agents}</td>
+		</tr>
+		<tr>
+			<td class="label">ships:</td>
+			<td class="value">{$status_store.stats.ships}</td>
+		</tr>
+		<tr>
+			<td class="label">systems:</td>
+			<td class="value">{$status_store.stats.systems}</td>
+		</tr>
+		<tr>
+			<td class="label">waypoints:</td>
+			<td class="value">{$status_store.stats.waypoints}</td>
+		</tr>
+	</table>
 {:else}
 	<h2>we have an error</h2>
 {/if}
 
 <style>
+	.label {
+		display: table-cell;
+		padding-right: 1vw;
+	}
 </style>
