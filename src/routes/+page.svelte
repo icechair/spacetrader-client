@@ -50,7 +50,6 @@
 
 <style>
 	.label {
-		display: table-cell;
 		padding-right: 1vw;
 	}
 </style>
